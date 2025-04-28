@@ -15,7 +15,7 @@ const classifyParticipants = (datos) =>
     }, {})
 
 
-const averageAge = (participants) =>
+const calculateAverageAge = (participants) =>
     participants.reduce((sum, { age }) => sum + age, 0) / participants.length || 0
 
 
@@ -64,6 +64,6 @@ console.log(calculateStatistics(validParticipant))*/
 
 module.exports ={
     classifyParticipants,
-    averageAge,
+    calculateAverageAge,
     calculateStatistics
 }
