@@ -1,6 +1,6 @@
 const { readSurvey } = require('./reading');
 const { classifyParticipants, calculateAverageAge, calculateStatistics} = require('./statistics')
-
+const { generateReport } = require('./report')
 
 const pathfile = process.argv[2] || '../encuesta.json'
 
@@ -11,6 +11,7 @@ async function main() {
     const statistics = calculateStatistics(classification.valid)
     const averageAge = calculateAverageAge(classification.valid)
     
+    console.log(generateReport(classification, statistics, averageAge)) 
     
  
     /*console.log(datos)
